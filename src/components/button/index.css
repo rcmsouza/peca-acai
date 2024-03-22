@@ -1,0 +1,22 @@
+.Button{
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  width: 266px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #B54FCE;
+  background-color: #791D8F;
+  color: white;
+  font-size: 12px;
+  line-height: 16px;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.secondary {
+  border: 1px solid #791D8F;
+  background-color: white;
+  color: #791D8F;
+}

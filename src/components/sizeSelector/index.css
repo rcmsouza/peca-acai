@@ -1,0 +1,125 @@
+
+.SizeSelectorContainer, .FruitSelectorContainer, .ComplementSelectorContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & > .SelectorHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & > .Title{
+      & > p {
+        font-size: 1rem;
+        line-height: 18.38px;
+        font-weight: 700;
+      }
+
+      span{
+        font-size: 12px;
+        color: #A9B1B8;
+      }
+    }
+
+    & > .Stage{
+      font-size: 12px;
+      color: #A9B1B8;
+    }
+  }
+
+  & > .OptionsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 14px;
+    line-height: 16.09px;
+
+    & > .SizeOption, .FruitOption, .ComplementOption{
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      width: 100%;
+      align-items: center;
+      
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        & > .RadioInput{
+          visibility: hidden;
+        }
+
+        .RadioInput:checked + span {
+          border: 1.5px solid #791D8F;
+        }
+        
+        .RadioInput:checked + span:after {
+          opacity: 1!important;
+        }
+
+        .custom-radio {
+          cursor: pointer;
+          width: 24px;
+          height: 24px;
+          border: 1.5px solid #791D8F;
+          border-radius: 50%;
+          display: inline-block;
+          position: relative;
+        }
+        
+        /* for inner filled circle */
+        .custom-radio::after {
+          content: '';
+          width: 14.51px;
+          height: 14.51px;
+          background: #791D8F;
+          position: absolute;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          transition: opacity 0.2s;
+        }
+      }
+    }
+
+    .label {
+      & > div {
+        & > input[type="checkbox"] {
+          clip: rect(0 0 0 0);
+          clip-path: inset(50%);
+          height: 1px;
+          overflow: hidden;
+          position: absolute;
+          white-space: nowrap;
+          width: 1px;
+        }
+
+        & > .custom-checkbox {
+          display: inline-block; 
+          height: 24px;
+          width: 24px;
+          background: #fff;
+        }
+
+        & > .custom-checkbox::after {
+          content: url('../../assets/add_box.svg');
+          zoom:125%;
+          border: none;
+        }
+
+        & > .custom-checkbox.checked::after {
+          content: url('../../assets/check_box.svg');
+          zoom:125%;
+          border: none;
+        }
+
+
+      }
+    }
+  }
+}

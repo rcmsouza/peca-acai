@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+
+.Header{
+  height: 52px;
+  background-color: #791D8F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Spicy Rice", serif;
+  color: white;
+  font-size: 31.61px;
+  line-height: 43.59px;
+  font-weight: 400;
+  width: 100%;
+  gap: 8px;
+}
+
+@media (max-width: 600px) {
+  .Header {
+    font-size: 27px;
+    line-height: 37.23px;
+  }
+}
